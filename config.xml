@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<widget xmlns="http://www.w3.org/ns/widgets"           
+        xmlns:rim="http://www.blackberry.com/ns/widgets"            
+        version="1.0.0.5" id="MyHelloWorldApp" xml:lang="en">
+     <author>Khvtiso Zedelashvili</author>
+     <name>Calculator</name>
+     <description>Calculator</description>
+     <content src="index.html"/> 
+     <content src="centurie.html"/>   
+  
+     <icon src="icon.png" />
+</widget>    

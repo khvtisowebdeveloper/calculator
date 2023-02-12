@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .calculator {
+      width: 100vw;
+      height: 100vh;
+      margin: 0 auto;
+      background-color: lightgray;
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      height: 408px;
+      font-size: 120px;
+      text-align: right;
+    }
+
+    input[type="button"] {
+      width: 241px;
+      height: 212px;
+      font-size: 49px;
+    }
+    h1[type='khvtiso']{
+        position: absolute;
+        margin-top: -250px;
+        font-size: 100px;
+        margin-left: 250px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <form>
+      <input type="text" id="expression" disabled />
+      <br /><br />
+      <input type="button" value="1" onclick="appendExpression('1')" />
+      <input type="button" value="2" onclick="appendExpression('2')" />
+      <input type="button" value="3" onclick="appendExpression('3')" />
+      <input type="button" value="+" onclick="appendExpression('+')" />
+      <br />
+      <input type="button" value="4" onclick="appendExpression('4')" />
+      <input type="button" value="5" onclick="appendExpression('5')" />
+      <input type="button" value="6" onclick="appendExpression('6')" />
+      <input type="button" value="-" onclick="appendExpression('-')" />
+      <br />
+      <input type="button" value="7" onclick="appendExpression('7')" />
+      <input type="button" value="8" onclick="appendExpression('8')" />
+      <input type="button" value="9" onclick="appendExpression('9')" />
+      <input type="button" value="*" onclick="appendExpression('*')" />
+      <br />
+      <input type="button" value="C" onclick="clearExpression()" />
+      <input type="button" value="0" onclick="appendExpression('0')" />
+      <input type="button" value="=" onclick="calculate()" />
+      <input type="button" value="/" onclick="appendExpression('/')" />
+    </form>
+  </div>
+
+  <script>
+    function appendExpression(value) {
+      document.querySelector('#expression').value += value;
+    }
+
+    function clearExpression() {
+      document.querySelector('#expression').value = '';
+    }
+
+    function calculate() {
+      var expression = document.querySelector('#expression').value;
+      document.querySelector('#expression').value = eval(expression);
+    }
+  </script>
+  <h1 type="khvtiso" >BY:Khvtiso</h1>
+</body>
+</html>
